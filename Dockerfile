@@ -6,7 +6,7 @@ RUN DEBIAN_FRONTEND=noninteractive
 # To update the image
 RUN apt-get update
 # To install all the dependencies
-RUN apt-get install -y build-essential wget make curl unzip
+RUN apt-get install -y build-essential wget make curl unzip python
 # To download the Maxbin software and untar it
 RUN wget https://sourceforge.net/projects/maxbin/files/latest/download
 RUN tar xvf download
@@ -24,7 +24,10 @@ ENTRYPOINT ["/MaxBin-2.2/run_MaxBin.pl"]
 # TO build the image
 # sudo docker build -t="ubuntu/maxbin:2.2" .
 
-# To test the image
+# To test the image without arguments
+# sudo docker run ubuntu/maxbin:2.2
+
+# To test the image with arguments
 # mkdir -p docker_test
 # cd docker_test
 # Download the test files
