@@ -8,7 +8,7 @@ RUN apt-get update
 # To install all the dependencies
 RUN apt-get install -y build-essential wget make curl unzip python
 # To download the Maxbin software and untar it
-RUN wget https://sourceforge.net/projects/maxbin/files/latest/download
+RUN wget https://sourceforge.net/projects/maxbin/files/MaxBin-2.2.tar.gz/download
 RUN tar xvf download
 # To se the Workdirectory
 WORKDIR /MaxBin-2.2
